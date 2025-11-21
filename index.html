@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Automation Tester — Portfolio</title>
+  <meta name="description" content="Portfolio of a freelance automation tester showcasing skills, projects and contact details.">
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7; /* mint */
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1000px;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; margin:0; background:linear-gradient(180deg,#071129 0%,var(--bg) 100%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:88px;height:88px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#042; font-weight:700;font-size:28px;box-shadow:0 6px 18px rgba(6,8,20,0.6)}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:22px}
+    .card{background:linear-gradient(180deg,var(--card),#071228);border-radius:var(--radius);padding:18px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+
+    .section-title{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+
+    /* Skills */
+    ul.skills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+    ul.skills li{background:var(--glass);padding:8px 10px;border-radius:8px;color:var(--muted);font-weight:600;font-size:13px}
+
+    /* Projects */
+    .project{border-left:3px solid rgba(110,231,183,0.12);padding:12px 12px;margin-bottom:12px;border-radius:8px}
+    .project h3{margin:0;font-size:16px}
+    .project .meta{color:var(--muted);font-size:13px;margin-top:6px}
+    .project p{margin:10px 0 0;color:#dfe9f6;font-size:14px;line-height:1.45}
+    .tags{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:6px;font-size:12px;color:var(--muted)}
+
+    /* Right column (contact + quick info) */
+    .muted{color:var(--muted)}
+    .contact a{color:var(--accent);text-decoration:none;font-weight:700}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#042;font-weight:700;text-decoration:none}
+
+    footer{margin-top:24px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr;}
+      .wrap{padding:16px}
+      .avatar{width:72px;height:72px;font-size:22px}
+    }
+
+    /* Small helper */
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">AT</div>
+      <div>
+        <h1>Hi — I’m Alex, freelance Automation Tester</h1>
+        <p class="lead">I write reliable test automation to reduce manual work and help teams ship with confidence.</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Main column -->
+      <main>
+        <section class="card">
+          <div class="section-title">About</div>
+          <p class="small">I’m a pragmatic automation tester who focuses on building maintainable test suites and making testing part of the team’s workflow. I’ve worked on web apps, APIs, and CI pipelines — mainly using Selenium, Playwright, JavaScript/Python, and Postman for API testing. I enjoy turning flaky manual checks into stable automated tests and mentoring teams on testing best practices.</p>
+        </section>
+
+        <section class="card" style="margin-top:14px">
+          <div class="section-title">Selected Projects</div>
+
+          <article class="project">
+            <h3>E‑commerce Checkout Automation</h3>
+            <div class="meta">Selenium WebDriver • Java • TestNG • Jenkins</div>
+            <p>Built a cross-browser automation suite for the checkout flow (cart, discounts, payment mocks). Reduced manual regression cycles by ~70% and integrated tests into Jenkins for nightly runs.</p>
+            <div class="tags">
+              <span class="tag">Page Object Model</span>
+              <span class="tag">CI: Jenkins</span>
+              <span class="tag">Cross-browser</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>API Contract & Regression Tests</h3>
+            <div class="meta">Postman • Newman • JSON Schema</div>
+            <p>Created collections that validate API contracts and run them in CI. Added schema checks and linked failures to issues for faster triage.</p>
+            <div class="tags">
+              <span class="tag">Contract Testing</span>
+              <span class="tag">Newman</span>
+              <span class="tag">Monitoring</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Playwright Smoke Suite</h3>
+            <div class="meta">Playwright • TypeScript • GitHub Actions</div>
+            <p>Implemented a fast smoke suite that runs on every pull request and catches critical regressions before code review.</p>
+            <div class="tags">
+              <span class="tag">PR checks</span>
+              <span class="tag">Headless</span>
+              <span class="tag">Parallel runs</span>
+            </div>
+          </article>
+        </section>
+
+        <section class="card" style="margin-top:14px">
+          <div class="section-title">Approach</div>
+          <p class="small">I keep test suites simple and readable: clear structure, single responsibility tests, and meaningful assertions. I prefer end-to-end tests for high-value flows and rely on API/unit tests for fast feedback. In each project I add logging, screenshots on failure, and retries only where appropriate to avoid masking real issues.</p>
+        </section>
+      </main>
+
+      <!-- Sidebar -->
+      <aside>
+        <div class="card contact">
+          <div class="section-title">Quick Info</div>
+          <p><strong>Location:</strong> Remote (prefer IST overlap)</p>
+          <p><strong>Hourly rate:</strong> Available upon request</p>
+          <p><strong>Availability:</strong> Part-time / Contract</p>
+
+          <div style="margin-top:12px">
+            <div class="section-title">Skills</div>
+            <ul class="skills">
+              <li>Selenium</li>
+              <li>Playwright</li>
+              <li>Postman</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>TestNG / JUnit</li>
+              <li>CI (Jenkins/GitHub Actions)</li>
+              <li>BDD (Cucumber)</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:12px">
+            <div class="section-title">Contact</div>
+            <p class="small">Email: <a href="mailto:alex.qa@example.com">alex.qa@example.com</a></p>
+            <p class="small">Portfolio / Resume: <a href="#">Download (PDF)</a></p>
+            <a class="cta" href="mailto:alex.qa@example.com">Hire me</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <div class="section-title">Testimonials</div>
+          <p class="small">“Alex improved our release cadence by introducing targeted automation and robust CI checks. Reliable, communicative, and practical.” — Product Lead</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Alex — Freelance Automation Tester
+    </footer>
+  </div>
+
+  <script>
+    // small JS only to keep the footer year current; page is still standalone HTML
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
